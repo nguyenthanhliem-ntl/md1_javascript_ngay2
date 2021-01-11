@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form method="get">
+    <table style="width: 500px">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th></tr>
+        <th></th>
+        <tr style="text-align: center">
+            <td><input type="number" id="amount"/></td>
+            <td><select id="1">
+                <option value="1" >VietNam</option>
+                <option value="23000">USD</option>
+
+            </select></td>
+            <td><select id="2">
+                <option value="1" >VietNam</option>
+                <option value="23000">USD</option>
+
+            </select></td>
+            <td><button type="button"  onclick="getnumber()">Chuyển đổi</button></td>
+        </tr>
+    </table>
+</form>
+<p><div id="mylocation"></div></p>
+<script>
+    function getnumber(){
+        var field1 = document.getElementById("1").value;
+        var field2 = document.getElementById("2").value;
+        var amount = document.getElementById("amount").value;
+        var kq1 = field1*amount/field2;
+        if (field2 == "1")
+        {
+            var kq = kq1 + " VNĐ";
+        }
+        if (field2 == "23000")
+        {
+            var kq = kq1 + " USD";
+        }
+
+        var ketqua = "Result: "+ kq;
+        document.getElementById("mylocation").innerHTML=ketqua;
+    }
+</script>
+</body>
+</html>
