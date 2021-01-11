@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Điểm</title>
 </head>
 <body>
-$END$
+<script>
+    let inputLy;
+    let inputHoa;
+    let inputSinh;
+
+    inputLy = prompt(" Điểm Vật lý:");
+    inputHoa = prompt(" Điểm Hóa học:");
+    inputSinh = prompt(" Điểm Sinh học:");
+
+    let Ly = parseInt(inputLy);
+    let Hoa = parseInt( inputHoa);
+    let Sinh = parseInt( inputSinh);
+    let area = ( Ly+ Hoa+ Sinh )/3;
+    document.write(" Điểm trung bình: "+ area+"<br>");
+    let sum = ( Ly +Hoa +Sinh);
+    document.write(" Tổng điểm: "+ sum) ;
+
+</script>
 </body>
 </html>
